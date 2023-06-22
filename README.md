@@ -12,4 +12,4 @@ Posteriormente, são executadas as operações de abertura morfológica e fecham
 
 Por fim, as imagens resultantes de todas as operações são exibidas. A função cv2_imshow é usada para mostrar as imagens no ambiente de execução, permitindo visualizar as transformações morfológicas aplicadas.
 
-Em resumo, o script executa uma série de operações morfológicas em imagens, permitindo melhorar a qualidade das imagens, remover ruídos e destacar as características desejadas. A morfologia matemática é uma técnica importante em processamento de imagens e tem aplicações em diversas áreas, como visão computacional, reconhecimento de padrões e análise de imagens médicas.
+Resumidamente, o código executa uma série de operações morfológicas em imagens, permitindo melhorar a qualidade das imagens, remover ruídos e destacar as características desejadas. A morfologia matemática é uma técnica importante em processamento de imagens e tem aplicações em diversas áreas, como visão computacional, reconhecimento de padrões e análise de imagens médicas.
