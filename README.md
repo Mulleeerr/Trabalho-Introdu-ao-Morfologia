@@ -1,11 +1,15 @@
-Esse código é utilizado no processamento de imagens usando técnicas de morfologia matemática. A morfologia matemática é uma área da visão computacional que se concentra em operações de forma e estrutura de imagens.
+O código descrito utiliza a biblioteca OpenCV para executar operações de morfologicas em imagens. As operações morfologicas são uma técnica poderosa para analisar a forma e estrutura de objetos em uma imagem.
 
-Nas primeiras partes do código, é feita a importação de algumas bibliotecas necessárias para trabalhar com imagens. Em seguida, é feita a leitura de três imagens do disco: `j.png`, 'j_ruido.png' e 'j_furos.png'. Essas imagens são armazenadas em variáveis chamadas img, img_opening e img_closing.
+Primeiramente, são importadas as bibliotecas necessárias, incluindo OpenCV e NumPy. Em seguida, três imagens são lidas do disco: 'j.png', 'j_ruido.png' e 'j_furos.png'. Essas imagens são salvas em variáveis diferentes.
 
-Em seguida, criamos um kernel, que é uma matriz utilizada nas operações morfológicas. Neste caso, o kernel é uma matriz 5x5.
+O código, posteriormente cria uma matriz de tamanho 5x5 preenchida com uns. Essa matriz será usado nas operações morfológicas. A seguir, são aplicadas três operações: erosão, dilatação e gradiente morfológico.
 
-Depois disso, aplicamos diferentes operações morfológicas às imagens. A erosão é usada para diminuir o tamanho dos objetos na imagem, enquanto a dilatação aumenta o tamanho dos objetos. Também aplicamos o gradiente morfológico, que destaca as bordas dos objetos, a abertura morfológica, que remove pequenos objetos, e o fechamento morfológico, que preenche pequenos buracos.
+A erosão é um processo que "erode" ou diminui o tamanho dos objetos na imagem. Ela é realizada quando se aplica uma matriz(kernel) sobre a imagem, essa matriz percorre todos os pixels da imagem, comparando-os com a vizinhança definida pelo kernel. A erosão resulta no desgaste dos contornos dos objetos e reduz seu tamanho.
 
-Por fim, exibimos as imagens resultantes das operações morfológicas. Cada imagem é mostrada na tela usando a função cv2_imshow. Isso nos permite visualizar as alterações feitas nas imagens.
+A dilatação, por sua vez, expande os objetos presentes na imagem. Assim como a erosão, ela também utiliza uma matriz(kernel) para percorrer a imagem e comparar os pixels com a vizinhança definida pelo kernel. A dilatação preenche os espaços vazios próximos aos objetos, aumentando seu tamanho e conectividade.
 
-Em resumo, o código lê algumas imagens, aplica operações morfológicas nelas e exibe as imagens resultantes. Essas operações podem ser úteis para remover ruídos, destacar bordas ou realizar outros tipos de manipulação de imagens.
+Posteriormente, são executadas as operações de abertura morfológica e fechamento morfológico. A abertura morfológica é uma combinação de erosão seguida de dilatação, usada para remover pequenos objetos e ruídos. O fechamento morfológico é o oposto: dilatação seguida de erosão, utilizado para preencher pequenos buracos e lacunas nos objetos.
+
+Por fim, as imagens resultantes de todas as operações são exibidas. A função cv2_imshow é usada para mostrar as imagens no ambiente de execução, permitindo visualizar as transformações morfológicas aplicadas.
+
+Em resumo, o script executa uma série de operações morfológicas em imagens, permitindo melhorar a qualidade das imagens, remover ruídos e destacar as características desejadas. A morfologia matemática é uma técnica importante em processamento de imagens e tem aplicações em diversas áreas, como visão computacional, reconhecimento de padrões e análise de imagens médicas.
